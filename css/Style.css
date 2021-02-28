@@ -1,0 +1,257 @@
+
+@import url('../css/fonts.css');
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /* Theme color*/
+    /*text menu color*/
+
+    --text-gray:#3f4954;
+    --blue:#0096c7;
+    --midnight:#0077b6;
+    --skyblue:#48cae4;
+    --dblue:#03045e;
+
+    /*Gradient colors*/
+    --sky: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    /* theme font-family*/
+    
+    --Oswald:'Oswald',cursive;
+    --Roboto:'Roboto',cursive;
+}
+
+/*-----------------Global Classes-------------------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--text-gray);
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*----------------navbar-------------*/
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 50px;/*100vh;*/
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-self: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--dblue);
+}
+
+.collapse{
+    height: 20rem;
+
+}
+
+.nav .nav-items{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    /*-for the title brand-*/
+    font-family: var(--Oswald);
+    font-size: 1.7rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;  
+}
+
+.nav .social i{
+    padding: 0.2rem;
+}
+
+.nav .social i:hover{
+    color: var(--skyblue);
+}
+
+/*----------Main Section--------------*/
+/*----------Braand Photo Title-----------*/
+main .site-title{
+    background: url(../assets/home.background.jpg);
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem; ;
+    text-align: center;
+    color:var(--dblue) ;
+}
+
+main .site-title h1 h3{
+    margin: 0.3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: white;
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+
+/*-----------------Carousel Section---------------------*/
+main .adv{
+   /* background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position:right ;
+    background-size: 65%;*/
+    height: 90vh;
+    width: 100%;
+
+}
+
+main .adv .adv-post{
+    padding-top: 6rem;
+}
+
+main .adv-post .adv-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 89%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+main .adv-content .adv-title{
+    padding: 2rem 0;
+}
+
+main .adv-content .btn-adv{
+    padding: .7rem 2rem;
+    background: var(--skyblue);
+    margin: .5rem;
+}
+
+main .adv-content .btn-adv:hover{
+    background: var(--midnight);
+    border: 1px solid white;
+    color: white;
+}
+
+main .adv-content span{
+    display: block;
+}
+
+/*-----------Footer---------------*/
+footer.footer{
+    height: 100%;
+    background: var(--text-gray);
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container  h2{
+    color: white;
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--midnight);
+    font-size: 1rem;
+    width: 73%;
+}
+
+
+footer.footer .newsletter .form-element span{
+    background: --;
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+/*   Viewport less then or eqaul to 750px*/
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+}
